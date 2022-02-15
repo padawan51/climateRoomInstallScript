@@ -11,7 +11,6 @@ else
 	WORKSPACE="/home/pi/ROS_WS2"
 	WS_DIR="$WORKSPACE/climate_room_project"
 	ROS_VERSION=$(rosversion -d)
-	CURRENT_DIR=$(pwd)
 	
 	echo -n "Adresse IP du PC : "
 	read IP_PC
