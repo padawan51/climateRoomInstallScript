@@ -11,8 +11,8 @@ else
 	WORKSPACE="/home/pi/ROS_WS2"
 	WS_DIR="$WORKSPACE/climate_room_project"
 	ROS_VERSION=$(rosversion -d)
+	CURRENT_DIR=$(pwd)
 	
-	if [ 1 -eq 2 ]; then
 	echo -n "Adresse IP du PC : "
 	read IP_PC
 	
@@ -68,7 +68,6 @@ else
 	echo "$IP_RPI	"    "$NAME_RPI" >> /etc/hosts
 	echo "$IP_PC"			"$NAME_PC" >> /etc/hosts
 	# ________FIN de la modification du fichier /etc/hosts
-	fi
 	
 	# ________Installation de la bibliothèque pigpio
 	if [ ! -e /usr/local/include/pigpio.h ] && [ ! -e /usr/local/lib/libpigpio.so ]; then
@@ -107,6 +106,6 @@ else
 	catkin_make
 	chown -R pi:pi "$WORKSPACE"
 	rm -r "$WORKSPACE"/"$CR_GIT"/
-	rm /home/pi/Desktop/TEST/scripts/setup_cr_project.bash
+	rm -r /home/pi/Desktop/climateRoomInstallScript
 	# ________FIN de téléchargement du projet sur github
 fi
