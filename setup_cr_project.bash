@@ -22,8 +22,8 @@ else
 	read IP_RPI
 	
 	# ________Modification du fichier /host/pi/.bashrc
-	echo >> "$ROOT_BASHRC"
-	echo "########## CLIMATE ROOM PROJECT ##########" >> "$ROOT_BASHRC"
+	echo >> "$PI_BASHRC"
+	echo "########## CLIMATE ROOM PROJECT ##########" >> "$PI_BASHRC"
 	echo source /opt/ros/$(rosversion -d)/setup.bash >> "$PI_BASHRC"
 	echo >> "$PI_BASHRC"
 	
@@ -37,7 +37,7 @@ else
 	echo alias src=\'source "$PI_BASHRC"\' >> "$PI_BASHRC"
 	echo alias nano_bashrc=\'nano /home/pi/.bashrc\' >> "$PI_BASHRC"
 	echo alias climate_room_dir=\'cd /home/pi/ROS_WS/climate_room_project\' >> "$PI_BASHRC"
-	echo "########## END CLIMATE ROOM PROJECT ##########" >> "$ROOT_BASHRC"
+	echo "########## END CLIMATE ROOM PROJECT ##########" >> "PI_BASHRC"
 	echo >> "$PI_BASHRC"
 	# ________FIN de la modification du fichier /host/pi/.bashrc
 	
