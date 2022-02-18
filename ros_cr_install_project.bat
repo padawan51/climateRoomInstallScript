@@ -22,17 +22,17 @@ CD %ROOTWS%\%PROJECT_DIR_NAME%\%SRC_DIR%
 catkin_init_workspace
 CD %ROOTWS%\%PROJECT_DIR_NAME%
 catkin_make
-CD %ROOTWS%\%PROJECT_DIR_NAME%\%SRC_DIR%
-catkin_create_pkg %PKG_MSGS% roscpp
-rmdir /S /Q %PKG_MSGS%
+REM CD %ROOTWS%\%PROJECT_DIR_NAME%\%SRC_DIR%
+REM catkin_create_pkg %PKG_MSGS% roscpp
+REM rmdir /S /Q %PKG_MSGS%
 xcopy %ROOTWS%\%PROJECT_DIR_NAME%\%TMP_DIR%\%PROJECT_DIR_NAME%\src\%PKG_MSGS%\ %ROOTWS%\%PROJECT_DIR_NAME%\%SRC_DIR%\%PKG_MSGS%\ /E
-CD %ROOTWS%\%PROJECT_DIR_NAME%
+REM CD %ROOTWS%\%PROJECT_DIR_NAME%
 catkin_make
-CD %ROOTWS%\%PROJECT_DIR_NAME%\%SRC_DIR%
-catkin_create_pkg %PKG_NODES% roscpp %PKG_MSGS%
-rmdir /S /Q %PKG_NODES%
+REM CD %ROOTWS%\%PROJECT_DIR_NAME%\%SRC_DIR%
+REM catkin_create_pkg %PKG_NODES% roscpp %PKG_MSGS%
+REM rmdir /S /Q %PKG_NODES%
 xcopy %ROOTWS%\%PROJECT_DIR_NAME%\%TMP_DIR%\%PROJECT_DIR_NAME%\src\%PKG_NODES%\ %ROOTWS%\%PROJECT_DIR_NAME%\%SRC_DIR%\%PKG_NODES%\ /E
-CD %ROOTWS%\%PROJECT_DIR_NAME%
+REM CD %ROOTWS%\%PROJECT_DIR_NAME%
 catkin_make
 rmdir /S /Q %TMP_DIR%
 
@@ -46,4 +46,4 @@ SET PKG_NODES=
 
 rmdir /S /Q %USERPROFILE%\Bureau\climateRoomInstallScript
 
-exit
+REM exit
