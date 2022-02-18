@@ -1,7 +1,7 @@
 @echo off
 
 SET HMDRIVE=C:
-SET ROOTWS=%HMDRIVE%\ROS_WS
+SET ROOTWS=%HMDRIVE%\ROS_WS2
 SET PROJECT_DIR_NAME=climate_room_project_pc
 SET TMP_DIR=tmp
 SET SRC_DIR=src
@@ -43,5 +43,7 @@ SET TMP_DIR=
 SET SRC_DIR=
 SET PKG_MSGS=
 SET PKG_NODES=
+
+rmdir /S /Q %USERPROFILE%\Bureau\climateRoomInstallScript
 
 exit

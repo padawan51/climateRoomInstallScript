@@ -8,7 +8,7 @@ else
 	PI_BASHRC=/home/pi/.bashrc
 	ROOT_BASHRC=/root/.bashrc
 	NAME_RPI=$(hostname)
-	WORKSPACE="/home/pi/ROS_WS2"
+	WORKSPACE="/home/pi/ROS_WS"
 	WS_DIR="$WORKSPACE/climate_room_project"
 	ROS_VERSION=$(rosversion -d)
 	
