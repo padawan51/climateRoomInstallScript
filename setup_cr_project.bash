@@ -108,6 +108,7 @@ else
 	cp "$WORKSPACE"/"$CR_GIT"/project_node/ "$WS_DIR"/src/project_node/ -r
 	catkin_make
 	chown -R pi:pi "$WORKSPACE"
+	chmod -R +x "$WORKSPACE"
 	rm -r "$WORKSPACE"/"$CR_GIT"/
 	rm -r /home/pi/Desktop/climateRoomInstallScript
 	# ________FIN de téléchargement du projet sur github
